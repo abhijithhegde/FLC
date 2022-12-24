@@ -7,25 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
-        Button profile = (Button) findViewById(R.id.login_page);
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                open_login();
-            }
-        });
+        auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() == null) {
+            startActivity(new Intent(MainActivity.this, Login_page.class));
+            finish();
+        } else {
+            startActivity(new Intent(MainActivity.this, Admin_panel.class));
+            finish();
+        }
     }
-    public void open_login(){
-        Intent i = new Intent(getApplicationContext(),Login_page.class);
-        startActivity(i);
-    }
+
 }

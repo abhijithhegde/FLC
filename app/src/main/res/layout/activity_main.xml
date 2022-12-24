@@ -2,62 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <EditText
-        android:layout_width="267dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/login_page"
-        app:layout_constraintTop_toTopOf="parent"
-
-        android:textColorHint="#82898d"
-        android:textColor="@color/white"
-        android:hint="search"/>
-
-
-    <Button
-        android:id="@+id/login_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_200"
-        android:text="Profile"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:padding="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="177dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1000dp"
-                android:text="Welcome to FLC! Here are some short stories you might enjoy:&#10;&#10;Lamb to the Slaughter by Roald Dahl&#10;The Lottery by Shirley Jackson&#10;How to Become a Writer by Lorrie Moore&#10;Cat Person by Kristen Roupenian&#10;Cathedral by Raymond Carver&#10;A Good Man Is Hard to Find by Flannery O'Connor&#10;Symbols and Signs by Vladimir Nabokov."
-                android:textColor="@color/white" />
-
-        </LinearLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:background="#000000"/>
