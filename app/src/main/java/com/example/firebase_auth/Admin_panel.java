@@ -21,7 +21,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Admin_panel extends AppCompatActivity {
-    ImageView logouthome;
     RecyclerView recyclerView;
     Adaptor adaptor;
     TextView name;
@@ -42,34 +41,6 @@ public class Admin_panel extends AppCompatActivity {
         recyclerView.setAdapter(adaptor);
 
 
-//        logouthome = findViewById(R.id.logouthome);
-//        logouthome.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Dialog dialog = new Dialog(Admin_panel.this, R.style.Dialoge);
-//                dialog.setContentView(R.layout.dialog_layout);
-//                TextView yesbtn, nobtn;
-//                yesbtn = dialog.findViewById(R.id.yesbtn);
-//                nobtn = dialog.findViewById(R.id.nobtn);
-//                yesbtn.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        FirebaseAuth.getInstance().signOut();
-//                        startActivity(new Intent(Admin_panel.this, Login_page.class));
-//                        finish();
-//                    }
-//                });
-//                nobtn.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        dialog.dismiss();
-//
-//                    }
-//                });
-//                dialog.show();
-//            }
-//        });
-
     }
 
     @Override
@@ -87,10 +58,10 @@ public class Admin_panel extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search, menu);
-        getMenuInflater().inflate(R.menu.logout,menu);
+        getMenuInflater().inflate(R.menu.logout, menu);
         MenuItem item1 = menu.findItem(R.id.search);
         MenuItem item2 = menu.findItem(R.id.logout);
-        MenuItem item3 = menu.findItem(R.id.update);
+        MenuItem item3 = menu.findItem(R.id.adduser);
 
         item2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
@@ -105,7 +76,7 @@ public class Admin_panel extends AppCompatActivity {
         item3.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-                startActivity(new Intent(Admin_panel.this,update_profile.class));
+                startActivity(new Intent(Admin_panel.this, RegistrationActivity.class));
                 finish();
                 return false;
             }

@@ -70,5 +70,13 @@ public class Login_page extends AppCompatActivity {
                         });
             }
         });
+        TextView guest = findViewById(R.id.guest);
+        guest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login_page.this,Admin_panel.class));
+                finish();
+            }
+        });
     }
 }

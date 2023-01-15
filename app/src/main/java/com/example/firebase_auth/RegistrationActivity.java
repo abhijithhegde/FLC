@@ -158,4 +158,11 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         }
     }
+    @Override
+    public void onBackPressed() {
+        // Navigate back to the adminpanel activity
+        Intent intent = new Intent(RegistrationActivity.this, Admin_panel.class);
+        startActivity(intent);
+        finish();
+    }
 }
